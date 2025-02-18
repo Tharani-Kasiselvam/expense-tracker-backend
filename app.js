@@ -15,6 +15,7 @@ app.use(cors())
 //routes
 readdirSync('./routes').map(route => app.use('/app/v1',require('./routes/' + route)))
 
+//starting express server
 const server = () => {
     dbconn()
     app.listen(PORT, () => {
